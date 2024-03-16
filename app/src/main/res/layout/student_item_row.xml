@@ -54,7 +54,28 @@
                     android:text="B.Tech (CSE)"
                     android:textSize="16sp"
                     />
-
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    >
+                    <Button
+                        android:id="@+id/updateBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update"
+                        android:backgroundTint="@color/green"
+                        />
+                    <Button
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delete"
+                        android:backgroundTint="@color/red"
+                        android:layout_marginLeft="20dp"
+                        />
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

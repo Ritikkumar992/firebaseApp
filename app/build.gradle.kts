@@ -51,4 +51,7 @@ dependencies {
     // glide api: Glide supports fetching, decoding, and displaying video stills, images, and animated GIFs.
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
+    // dialog plus
+    implementation ("com.orhanobut:dialogplus:1.11@aar")
+
 }

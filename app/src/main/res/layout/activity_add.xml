@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add new Detail"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:background="#8C02E3"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        />
+    <EditText
+        android:id="@+id/addNewName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="start|center"
+        android:paddingLeft="10dp"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Id"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        />
+    <EditText
+        android:id="@+id/addNewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="start|center"
+        android:paddingLeft="10dp"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Courses"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        />
+    <EditText
+        android:id="@+id/addNewCourses"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="start|center"
+        android:paddingLeft="10dp"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Image Url"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        />
+    <EditText
+        android:id="@+id/addNewImgUrl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="start|center"
+        android:paddingLeft="10dp"
+        android:textSize="18sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <Button
+            android:id="@+id/addNewBackBtn"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:text="Back"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:backgroundTint="#BDBDBD"
+            />
+        <Button
+            android:id="@+id/addNewSaveBtn"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:text="Save"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:backgroundTint="#0058C3"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

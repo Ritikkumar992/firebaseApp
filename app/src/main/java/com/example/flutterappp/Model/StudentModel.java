@@ -1,15 +1,15 @@
 package com.example.flutterappp.Model;
 
 public class StudentModel {
-    String name, email, course, imgUrl;
+    String name, email, courses, imgUrl;
 
     StudentModel(){
         // Needed for Firebase
     }
-    public StudentModel(String name, String email, String course, String imgUrl) {
+    public StudentModel(String name, String email, String courses, String imgUrl) {
         this.name = name;
         this.email = email;
-        this.course = course;
+        this.courses = courses;
         this.imgUrl = imgUrl;
     }
 
@@ -30,11 +30,11 @@ public class StudentModel {
     }
 
     public String getCourse() {
-        return course;
+        return courses;
     }
 
     public void setCourse(String course) {
-        this.course = course;
+        this.courses = course;
     }
 
     public String getImgUrl() {

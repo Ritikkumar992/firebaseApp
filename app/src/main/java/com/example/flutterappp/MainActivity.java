@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SearchView;
 
 import com.example.flutterappp.Adapter.StudentAdapter;
 import com.example.flutterappp.Model.StudentModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<StudentModel> studentArr = new ArrayList<>();
     StudentAdapter adapter;
+    FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,17 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+
+
+        //============================== Create Operation =================================//
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,AddActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //============== Static Data ===============================//
         /**
@@ -45,12 +60,11 @@ public class MainActivity extends AppCompatActivity {
          * Github link: https://github.com/Ritikkumar992/ApiApp/tree/master/ApiExample1
          */
 
-        //======================= Fetching Data from firebase Realtime Database ====================//
+        //======================= Read ---> Fetching Data from firebase Realtime Database ====================//
         FirebaseRecyclerOptions<StudentModel> options =
                 new FirebaseRecyclerOptions.Builder<StudentModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("teachers"), StudentModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("students"), StudentModel.class)
                         .build();
-
 
         adapter = new StudentAdapter(options);
         recyclerView.setAdapter(adapter);
@@ -69,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.stopListening();
     }
 
-    // ================================= Search Icon Implementation==========================//
+    // ================================= Search Icon Implementation ==========================//
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search, menu);
