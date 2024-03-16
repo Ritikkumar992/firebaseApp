@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "513879151547",
+    "firebase_url": "https://dump-306cc-default-rtdb.firebaseio.com",
+    "project_id": "dump-306cc",
+    "storage_bucket": "dump-306cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513879151547:android:7461b3f8727b04a47cea9e",
+        "android_client_info": {
+          "package_name": "com.example.flutterappp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpDCv5yn7Y1cCpceZoHBKA5ep6I6CvQNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
