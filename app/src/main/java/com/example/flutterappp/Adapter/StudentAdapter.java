@@ -45,7 +45,7 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<StudentModel, Studen
     protected void onBindViewHolder(@NonNull ViewHolder holder, final int position, @NonNull StudentModel model) {
         holder.studentName.setText(model.getName());
         holder.studentEmail.setText(model.getEmail());
-        holder.studentCourses.setText(model.getCourse());
+        holder.studentCourses.setText(model.getCourses());
 
         Glide.with(holder.studentImg.getContext())
                 .load(model.getImgUrl())
@@ -68,13 +68,13 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<StudentModel, Studen
             //------- attaching default value------//
             EditText name = view.findViewById(R.id.editTxtName);
             EditText email = view.findViewById(R.id.editTxtEmail);
-            EditText course = view.findViewById(R.id.editTxtCourses);
+            EditText courses = view.findViewById(R.id.editTxtCourses);
             EditText imgUrl = view.findViewById(R.id.editTxtImgUrl);
             Button updateBtn = view.findViewById(R.id.popUp_updateBtn);
 
             name.setText(model.getName());
             email.setText(model.getEmail());
-            course.setText(model.getCourse());
+            courses.setText(model.getCourses());
             imgUrl.setText(model.getImgUrl());
 
             dialogPlus.show();
@@ -85,7 +85,7 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<StudentModel, Studen
                 Map<String, Object> mp = new HashMap<>();
                 mp.put("name", name.getText().toString());
                 mp.put("email", email.getText().toString());
-                mp.put("course", course.getText().toString());
+                mp.put("courses", courses.getText().toString());
                 mp.put("imgUrl", imgUrl.getText().toString());
 
                 FirebaseDatabase.getInstance().getReference().child("students")
@@ -104,9 +104,7 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<StudentModel, Studen
                                 dialogPlus.dismiss();
                             }
                         });
-
             });
-
         });
 
         //------------------ Delete  Operation:----------------------//

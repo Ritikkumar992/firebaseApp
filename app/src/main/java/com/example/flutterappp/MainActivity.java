@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AddActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
                 startActivity(intent);
             }
         });
@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
         //============== Static Data ===============================//
         /**
 
-        studentArr.add(new StudentModel("Ritik","rk@gmail.com","Btech", "https://th.bing.com/th/id/OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw?rs=1&pid=ImgDetMain"));
-        studentArr.add(new StudentModel("Ritik","rk@gmail.com","Btech", "https://th.bing.com/th/id/OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw?rs=1&pid=ImgDetMain"));
-        studentArr.add(new StudentModel("Ritik","rk@gmail.com","Btech", "https://th.bing.com/th/id/OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw?rs=1&pid=ImgDetMain"));
-        studentArr.add(new StudentModel("Ritik","rk@gmail.com","Btech", "https://th.bing.com/th/id/OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw?rs=1&pid=ImgDetMain"));
+         studentArr.add(new StudentModel("Ritik","rk@gmail.com","Btech", "https://th.bing.com/th/id/OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw?rs=1&pid=ImgDetMain"));
+         studentArr.add(new StudentModel("Ritik","rk@gmail.com","Btech", "https://th.bing.com/th/id/OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw?rs=1&pid=ImgDetMain"));
+         studentArr.add(new StudentModel("Ritik","rk@gmail.com","Btech", "https://th.bing.com/th/id/OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw?rs=1&pid=ImgDetMain"));
+         studentArr.add(new StudentModel("Ritik","rk@gmail.com","Btech", "https://th.bing.com/th/id/OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw?rs=1&pid=ImgDetMain"));
 
-        */
+         */
         //============================ Fetching Data from API =====================//
         /**
          * Using Retrofit API:
@@ -82,13 +82,14 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
+}
 
     // ================================= Search Icon Implementation ==========================//
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search, menu);
-        return true;
-    }
+////    @Override
+////    public boolean onCreateOptionsMenu(Menu menu) {
+////        getMenuInflater().inflate(R.menu.search, menu);
+////        return true;
+////    }
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        getMenuInflater().inflate(R.menu.search, menu);
@@ -99,32 +100,31 @@ public class MainActivity extends AppCompatActivity {
 //            @Override
 //            public boolean onQueryTextSubmit(String query) {
 //                txtSearch(query);
-//                return true;
+//                return false;
 //            }
 //
 //            @Override
 //            public boolean onQueryTextChange(String newText) {
 //                txtSearch(newText);
-//                return true;
+//                return false;
 //            }
 //        });
 //
-//        return true;
+//        return super.onCreateOptionsMenu(menu);
 //    }
-
-    // ============================= searching from firebase ===================//
-    private void txtSearch(String str)
-    {
-        FirebaseRecyclerOptions<StudentModel> options =
-                new FirebaseRecyclerOptions.Builder<StudentModel>()
-                        .setQuery(FirebaseDatabase.getInstance()
-                                .getReference()
-                                .child("students").orderByChild("name").startAt(str).endAt(str+"~"),
-                                StudentModel.class)
-                        .build();
-
-        adapter = new StudentAdapter(options);
-        adapter.startListening();
-        recyclerView.setAdapter(adapter);
-    }
-}
+//
+//    // ============================= searching from firebase ===================//
+//    private void txtSearch(String str)
+//    {
+//        FirebaseRecyclerOptions<StudentModel> options =
+//                new FirebaseRecyclerOptions.Builder<StudentModel>()
+//                        .setQuery(FirebaseDatabase.getInstance()
+//                                .getReference()
+//                                .child("students").orderByChild("email").startAt(str).endAt(str+"~"),
+//                                StudentModel.class)
+//                        .build();
+//
+//        adapter = new StudentAdapter(options);
+//        adapter.startListening();
+//        recyclerView.setAdapter(adapter);
+//    }

@@ -29,11 +29,11 @@ public class StudentModel {
         this.email = email;
     }
 
-    public String getCourse() {
+    public String getCourses() {
         return courses;
     }
 
-    public void setCourse(String course) {
+    public void setCourses(String course) {
         this.courses = course;
     }
 

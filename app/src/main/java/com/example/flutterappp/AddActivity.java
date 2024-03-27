@@ -37,7 +37,7 @@ public class AddActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertData();
+                insertData(); // inserting date to our firebase database.
                 clearAll();
                 startActivity(new Intent(AddActivity.this, MainActivity.class));
             }
@@ -56,7 +56,7 @@ public class AddActivity extends AppCompatActivity {
         map.put("name",name.getText().toString());
         map.put("email",email.getText().toString());
         map.put("courses",courses.getText().toString());
-        map.put("imgUrl",imgUrl.getText().toString());
+        map.put("imgUrl",imgUrl.getText().toString()); // ""
 
         FirebaseDatabase.getInstance().getReference().child("students")
                 .push().setValue(map)
